@@ -2,6 +2,7 @@
 #define SORTING_HH_
 
 #include <vector>
+#include <cstdint>
 
 
 void bubble_sort(std::vector<uint16_t>& arr);
