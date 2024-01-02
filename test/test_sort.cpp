@@ -7,13 +7,11 @@
 
 
 #define VECTOR_SIZE 1000
-
+#define MINVAL      0
+#define MAXVAL      10000
 
 /** @brief Helper function to generate a vector with random numbers. */
 static std::vector<uint16_t> generate_vector_with_rand_nums() {
-    const uint16_t MINVAL = -10000;
-    const uint16_t MAXVAL = 10000;
-
     std::vector<uint16_t> v;
     std::random_device rd;
     std::mt19937 gen(rd());
