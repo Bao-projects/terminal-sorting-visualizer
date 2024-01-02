@@ -10,6 +10,7 @@
 #define MINVAL      0
 #define MAXVAL      10000
 
+
 /** @brief Helper function to generate a vector with random numbers. */
 static std::vector<uint16_t> generate_vector_with_rand_nums() {
     std::vector<uint16_t> v;
