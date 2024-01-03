@@ -3,11 +3,7 @@
 #include <algorithm> // TODO: remove this when all algos are implemented.
 #define ARR_LEN arr.size()
 
-/**
- * @brief Bubble Sort.
- *
- * @param arr
- */
+// BUBBLE SORT
 void bubble_sort(std::vector<uint16_t>& arr) {
     for(int i = 0; i < ARR_LEN -1; i++){
         for(int j = 0; j < ARR_LEN - i -1; j ++){
@@ -18,8 +14,17 @@ void bubble_sort(std::vector<uint16_t>& arr) {
     }
 }
 
+// SELECTION SORT
 void selection_sort(std::vector<uint16_t>& arr) {
-    std::sort(arr.begin(), arr.end()); // TODO: remove this and actually implement the algo.
+    for(int i = 0; i < ARR_LEN; i++){
+        int min = i;
+        for(int j = i + 1; j < ARR_LEN; j++){
+            if(arr[j] < arr[min]){
+                min = j; 
+            }
+        }
+        std::swap(arr[i], arr[min]);
+    }
 }
 
 void insertion_sort(std::vector<uint16_t>& arr) {
