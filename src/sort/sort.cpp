@@ -27,8 +27,18 @@ void selection_sort(std::vector<uint16_t>& arr) {
     }
 }
 
+// INSERTION SORT
 void insertion_sort(std::vector<uint16_t>& arr) {
-    std::sort(arr.begin(), arr.end()); // TODO: remove this and actually implement the algo.
+    for(int i = 1; i < ARR_LEN; i++){
+        int key = arr[i];
+        int j = i - 1;
+
+        while(j >= 0 && arr[j] > key){
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = key;
+    }
 }
 
 void merge_sort(std::vector<uint16_t>& arr) {
