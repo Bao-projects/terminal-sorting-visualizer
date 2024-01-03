@@ -19,7 +19,7 @@ void bubble_sort(std::vector<uint16_t>& arr) {
             }
         }
 
-        //if now swapping, the array is sorted.
+        // if not swapping, the array is sorted.
         if(!swapped) {
             break;
         }
