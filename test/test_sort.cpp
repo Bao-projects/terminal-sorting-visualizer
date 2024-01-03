@@ -33,6 +33,7 @@ static std::vector<uint16_t> sort_vector(std::vector<uint16_t> v) {
     return sorted_v;
 }
 
+static void mock_show_array(std::vector<uint16_t>, uint16_t, uint16_t) {}
 
 UTEST(test_sort, test_bubble_sort) {
     // Generate a vector with random values
@@ -42,7 +43,7 @@ UTEST(test_sort, test_bubble_sort) {
     std::vector<uint16_t> sorted_v = sort_vector(v);
 
     // Sort the random vector with the bubble sort function
-    bubble_sort(v);
+    bubble_sort(v, &mock_show_array);
     // Make sure the bubble sort function works and the vector is sorted
     for (uint16_t i = 0; i < VECTOR_SIZE; i++) {
         ASSERT_EQ(v[i], sorted_v[i]);
